@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>balanced parentheses</title>
+    </head>
+    <script>
+        function chkp(cdnpss)
+{   
+   var chk=cdnpss.split('');
+   var l=cdnpss.length;
+   //alert(l)
+   var cnt=0;
+   var x;
+   for(x=0; x<l; x++)
+
+   {
+     //  alert("inside loop")
+       if(chk[x]>="0" && chk[x]<="9")
+        {
+            cnt=cnt+1;
+        }
+    }
+        
+        if((chk[0]=="(" && chk[4]==")" && chk[9]=="-")||(chk[3]=="-" && chk[7]=="-"))
+         {
+             if(cnt==10);
+             {alert("it is a valid phone number");
+
+             }
+             
+        
+         }
+         else
+         {
+             alert("not valid")
+         }
+        
+   }
+
+
+        
+        
+    </script>
+    Enter a phone number format:<input type="text" name="ps" id="cdnps" style="margin-right: 50;margin-bottom: 50;" required>  
+     
+    <input type="button"  class="btn" value="click here" onclick="chkp(document.getElementById('cdnps').value)"></button>
+    <style>
+        .btn{
+         background-color: blanchedalmond;
+         color: black;
+         display: inline-block;
+         text-align: center;
+         cursor: grabbing;
+         box-shadow: burlywood;
+         border-style: double;
+         padding: 8px;
+         position: absolute;
+         left: 600;
+         
+        }
+        </style>
+        </html>
