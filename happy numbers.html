@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>anagram</title>
+    </head>
+    <script>
+        function happycheck()
+       {
+             var nos=document.dtls.num1.value;
+             
+  var i = 0;
+  for (i; i < 10000; i++) {
+    nos = newNumber(nos);
+  }
+  nos == 1 ? alert("it's happy number") : alert("it's not happy number");
+  
+
+function newNumber(nos) {
+  var sum = 0;
+  var temp = 0;
+  while (nos != 0) {
+    temp = nos % 10;
+    nos = (nos - temp) / 10;
+    sum += temp * temp;
+  }
+  return sum;
+}
+
+
+       }
+    </script>
+    <form action="" name="dtls" onsubmit="happycheck()">
+    Enter a number:<input type="number" name="num" id="num1" style="margin-right: 50;margin-bottom: 50;" required>
+    <input type="submit" value="submit" class="subbtn" style="font-size: large;">
+</form>
+</html>
